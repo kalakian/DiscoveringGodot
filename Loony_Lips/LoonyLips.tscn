@@ -39,10 +39,10 @@ margin_bottom = -24.0
 alignment = 2
 
 [node name="DisplayText" type="Label" parent="VBoxContainer"]
-margin_top = 195.0
 margin_right = 1232.0
 margin_bottom = 595.0
 rect_min_size = Vector2( 0, 400 )
+size_flags_vertical = 7
 custom_fonts/font = SubResource( 1 )
 text = "Placeholder Text"
 autowrap = true
