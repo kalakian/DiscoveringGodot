@@ -52,6 +52,7 @@ margin_top = 599.0
 margin_right = 1232.0
 margin_bottom = 672.0
 custom_constants/separation = 12
+alignment = 2
 
 [node name="PlayerText" type="LineEdit" parent="VBoxContainer/HBoxContainer"]
 margin_right = 1066.0

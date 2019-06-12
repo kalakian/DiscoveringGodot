@@ -23,7 +23,10 @@ func _on_PlayerText_text_entered(new_text):
 
 
 func _on_OKButton_pressed():
-	add_to_player_words()
+	if is_story_done():
+		get_tree().reload_current_scene()
+	else:
+		add_to_player_words()
 
 
 func add_to_player_words():
@@ -39,7 +42,7 @@ func is_story_done():
 
 func check_player_words_length():
 	if is_story_done():
-		tell_story()
+		end_game()
 	else:
 		prompt_player()
 
@@ -51,6 +54,11 @@ func tell_story():
 func prompt_player():
 	DisplayText.text += "May I have " + prompts[player_words.size()] + " please?"
 
+
+func end_game():
+	tell_story()
+	PlayerText.queue_free()
+	$VBoxContainer/HBoxContainer/Label.text = "Again?"
 
 
 
